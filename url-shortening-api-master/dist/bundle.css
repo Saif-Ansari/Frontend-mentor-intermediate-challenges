@@ -1,4 +1,55 @@
 /*!*******************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/style.scss ***!
   \*******************************************************************************************************************************************************************************/
-
+.navbar {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+.navbar img {
+  height: 30px;
+}
+.navbar__section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.navbar__section ul {
+  list-style: none;
+}
+.navbar__section ul li {
+  display: inline-block;
+  margin: 0 5px;
+  color: #bfbfbf;
+  cursor: pointer;
+}
+.navbar__section ul li:hover {
+  color: black;
+}
+.navbar__section--login {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.navbar__section--login a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+.navbar__section--login a:hover {
+  color: black;
+}
+.navbar__section--login button {
+  border: none;
+  background-color: #2acfcf;
+  padding: 8px 24px;
+  border-radius: 24px;
+}
+.navbar__section--login button a {
+  color: black;
+}
+.navbar__section--login button a:hover {
+  color: #fff;
+}

@@ -1,1 +1,55 @@
+$gray: hsl(0, 0%, 75%);
+$cyan: hsl(180, 66%, 49%);
 
+.navbar {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  img {
+    height: 30px;
+  }
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        margin: 0 5px;
+        color: $gray;
+        cursor: pointer;
+      }
+      li:hover {
+        color: black;
+      }
+    }
+    &--login {
+      width: 15%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      a {
+        text-decoration: none;
+        color: $gray;
+      }
+      a:hover {
+        color: black;
+      }
+      button {
+        border: none;
+        background-color: $cyan;
+        padding: 8px 24px;
+        border-radius: 24px;
+        a {
+          color: black;
+        }
+        a:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
