@@ -1,6 +1,22 @@
 $gray: hsl(0, 0%, 75%);
 $cyan: hsl(180, 66%, 49%);
 
+button {
+  border: none;
+  background-color: $cyan;
+  cursor: pointer;
+  color: #fff;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #fff;
+  }
+}
+button:hover {
+  background-color: hsl(180, 90%, 60%);
+}
 .navbar {
   display: flex;
   width: 80%;
@@ -40,20 +56,15 @@ $cyan: hsl(180, 66%, 49%);
         color: black;
       }
       button {
-        border: none;
-        background-color: $cyan;
         padding: 8px 24px;
         border-radius: 24px;
-        cursor: pointer;
         a {
           color: white;
+          text-decoration: none;
         }
         a:hover {
           color: #fff;
         }
-      }
-      button:hover {
-        background-color: hsl(180, 90%, 60%);
       }
     }
   }
@@ -79,25 +90,45 @@ $cyan: hsl(180, 66%, 49%);
     button {
       margin-top: 2rem;
       align-self: baseline;
-      border: none;
-      background-color: $cyan;
+
       padding: 14px 34px;
       border-radius: 24px;
-      cursor: pointer;
-      a {
-        color: white;
-        text-decoration: none;
-      }
-      a:hover {
-        color: #fff;
-      }
-    }
-    button:hover {
-      background-color: hsl(180, 90%, 60%);
     }
   }
   img {
     width: 50%;
     max-height: 400px;
+  }
+}
+
+.urlStatistics {
+  background-color: #edf1f6;
+  height: 500px;
+  margin-top: 10rem;
+  &__searchWrapper {
+    position: relative;
+    width: 80%;
+    bottom: 15%;
+    margin: 0 auto;
+    &--inputBlock {
+      background-color: hsl(260, 8%, 14%);
+      height: 150px;
+      gap: 1rem;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      input {
+        width: 50%;
+        padding: 0.8rem;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+      }
+      button {
+        padding: 0.8rem 3rem;
+        border-radius: 5px;
+      }
+    }
   }
 }

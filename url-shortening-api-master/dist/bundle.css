@@ -1,6 +1,24 @@
 /*!*******************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/style.scss ***!
   \*******************************************************************************************************************************************************************************/
+button {
+  border: none;
+  background-color: #2acfcf;
+  cursor: pointer;
+  color: #fff;
+}
+button a {
+  color: white;
+  text-decoration: none;
+}
+button a:hover {
+  color: #fff;
+}
+
+button:hover {
+  background-color: #3df5f5;
+}
+
 .navbar {
   display: flex;
   width: 80%;
@@ -43,20 +61,15 @@
   color: black;
 }
 .navbar__section--login button {
-  border: none;
-  background-color: #2acfcf;
   padding: 8px 24px;
   border-radius: 24px;
-  cursor: pointer;
 }
 .navbar__section--login button a {
   color: white;
+  text-decoration: none;
 }
 .navbar__section--login button a:hover {
   color: #fff;
-}
-.navbar__section--login button:hover {
-  background-color: #3df5f5;
 }
 
 .getStarted {
@@ -81,23 +94,42 @@
 .getStarted__content button {
   margin-top: 2rem;
   align-self: baseline;
-  border: none;
-  background-color: #2acfcf;
   padding: 14px 34px;
   border-radius: 24px;
-  cursor: pointer;
-}
-.getStarted__content button a {
-  color: white;
-  text-decoration: none;
-}
-.getStarted__content button a:hover {
-  color: #fff;
-}
-.getStarted__content button:hover {
-  background-color: #3df5f5;
 }
 .getStarted img {
   width: 50%;
   max-height: 400px;
+}
+
+.urlStatistics {
+  background-color: #edf1f6;
+  height: 500px;
+  margin-top: 10rem;
+}
+.urlStatistics__searchWrapper {
+  position: relative;
+  width: 80%;
+  bottom: 15%;
+  margin: 0 auto;
+}
+.urlStatistics__searchWrapper--inputBlock {
+  background-color: #232127;
+  height: 150px;
+  gap: 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.urlStatistics__searchWrapper--inputBlock input {
+  width: 50%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.urlStatistics__searchWrapper--inputBlock button {
+  padding: 0.8rem 3rem;
+  border-radius: 5px;
 }
