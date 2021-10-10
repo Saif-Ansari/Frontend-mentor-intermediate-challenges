@@ -104,7 +104,6 @@ button:hover {
 
 .urlStatistics {
   background-color: #edf1f6;
-  height: 500px;
   margin-top: 10rem;
 }
 .urlStatistics__searchWrapper {
@@ -132,4 +131,85 @@ button:hover {
 .urlStatistics__searchWrapper--inputBlock button {
   padding: 0.8rem 3rem;
   border-radius: 5px;
+}
+.urlStatistics__searchWrapper--details {
+  text-align: center;
+  margin-top: 5rem;
+}
+.urlStatistics__searchWrapper--details h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.urlStatistics__searchWrapper--details p {
+  color: #bfbfbf;
+  margin: 5px 0;
+}
+.urlStatistics__searchWrapper--cardContainer {
+  display: grid;
+  margin-top: 5rem;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(8, 2fr);
+}
+.urlStatistics__searchWrapper--cardContainer .cardItem {
+  background-color: #fff;
+  position: relative;
+}
+.urlStatistics__searchWrapper--cardContainer .cardItem .imageBlock {
+  background-color: #232127;
+  display: inline-block;
+  padding: 0.8rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 8%;
+  top: -15%;
+}
+.urlStatistics__searchWrapper--cardContainer .cardItem .imageBlock img {
+  width: 40px;
+  height: 40px;
+}
+.urlStatistics__searchWrapper--cardContainer .cardItem__description {
+  margin-top: 1.5rem;
+  padding: 1rem 1rem 1rem 7%;
+}
+.urlStatistics__searchWrapper--cardContainer .cardItem__description p {
+  color: #bfbfbf;
+  margin: 5px 0;
+}
+.urlStatistics__searchWrapper--cardContainer .item1 {
+  grid-row: 1/span 4;
+  grid-column: 1/span 3;
+}
+.urlStatistics__searchWrapper--cardContainer .item2 {
+  grid-row: 2/span 4;
+  grid-column: 5/span 3;
+}
+.urlStatistics__searchWrapper--cardContainer .item3 {
+  grid-row: 3/span 4;
+  grid-column: 9/span 3;
+}
+.urlStatistics__searchWrapper--cardContainer .cardSeparater {
+  height: 5px;
+  background-color: #2acfcf;
+}
+.urlStatistics__searchWrapper--cardContainer .sep1 {
+  grid-row: 3;
+}
+.urlStatistics__searchWrapper--cardContainer .sep2 {
+  grid-column: 8;
+  grid-row: 4;
+}
+
+.getStarted2 {
+  background-color: #232127;
+  padding: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+.getStarted2 h1 {
+  margin: 1rem;
+  font-size: 3rem;
+}
+.getStarted2 button {
+  padding: 14px 34px;
+  border-radius: 24px;
 }
