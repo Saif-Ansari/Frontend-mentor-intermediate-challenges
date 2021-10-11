@@ -105,6 +105,7 @@ button:hover {
 .urlStatistics {
   background-color: #edf1f6;
   margin-top: 10rem;
+  display: flex;
 }
 .urlStatistics__searchWrapper {
   position: relative;
@@ -120,6 +121,9 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  width: 100%;
+  top: -10%;
 }
 .urlStatistics__searchWrapper--inputBlock input {
   width: 50%;
@@ -134,7 +138,7 @@ button:hover {
 }
 .urlStatistics__searchWrapper--details {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 .urlStatistics__searchWrapper--details h1 {
   font-size: 3rem;
@@ -212,4 +216,40 @@ button:hover {
 .getStarted2 button {
   padding: 14px 34px;
   border-radius: 24px;
+}
+
+footer {
+  background-color: black;
+  padding: 2rem 8rem;
+  display: flex;
+  gap: 2rem;
+  color: #fff;
+  justify-content: space-around;
+}
+footer .details h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+footer .details div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer .details div a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+footer .details div a:hover {
+  color: #2acfcf;
+}
+footer .socials {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+footer .socials i {
+  cursor: pointer;
+}
+footer .socials i:hover {
+  color: #2acfcf;
 }
