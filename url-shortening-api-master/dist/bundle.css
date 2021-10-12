@@ -112,6 +112,15 @@ button:hover {
   width: 80%;
   bottom: 15%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.urlStatistics__searchWrapper--inputBlockContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  top: -10%;
 }
 .urlStatistics__searchWrapper--inputBlock {
   background-color: #232127;
@@ -121,9 +130,6 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  width: 100%;
-  top: -10%;
 }
 .urlStatistics__searchWrapper--inputBlock input {
   width: 50%;

@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n\n\n//# sourceURL=webpack://webpack-boilerplate/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n\nvar token = \"8c2bde14e18cbf44c81a02258f061159bd67abb0\";\nvar urlData = [];\n\nfunction fetchData(url) {\n  var data = {\n    long_url: url,\n    domain: \"bit.ly\"\n  };\n  fetch(\"https://api-ssl.bitly.com/v4/shorten\", {\n    method: \"POST\",\n    headers: {\n      Authorization: \"Bearer \".concat(token),\n      \"Content-Type\": \"application/json\"\n    },\n    body: JSON.stringify(data)\n  }).then(function (response) {\n    return response.json();\n  }).then(function (data) {\n    urlData.push({\n      long_url: url,\n      short_url: data.link\n    });\n  });\n  console.log({\n    urlData: urlData\n  });\n}\n\ndocument.getElementById(\"getLink\").addEventListener(\"click\", function (e) {\n  var inputValue = document.querySelector(\".url\").value;\n  fetchData(inputValue);\n});\n\n//# sourceURL=webpack://webpack-boilerplate/./src/index.js?");
 
 /***/ }),
 
