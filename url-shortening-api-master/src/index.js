@@ -20,8 +20,7 @@ function fetchData(url) {
     .then((response) => response.json())
     .then((data) => {
       if (data.message) {
-        input.style.border = "2px solid red";
-        errMsg.style.display = "block";
+        addInputErrStyle();
       } else {
         if (urlData.length === 3) {
           urlData.shift();
@@ -35,27 +34,50 @@ function fetchData(url) {
 document.getElementById("getLink").addEventListener("click", function (e) {
   let inputValue = input.value;
   if (!inputValue.trim()) {
-    input.style.border = "2px solid red";
-    errMsg.style.display = "block";
+    addInputErrStyle();
     return;
   } else {
     fetchData(inputValue);
-    input.style.border = "none";
-    errMsg.style.display = "none";
+    removeInputErrStyle();
+    input.value = "";
   }
 });
 
 function renderUrl() {
   document.querySelector(".urlBlock").innerHTML = "";
   urlData.map(({ long_url, short_url }) => {
-    let data = `<p>${long_url}</p>
+    let data = `<p title="${long_url}">${long_url}</p>
     <div>
       <span>${short_url}</span>
-      <button>Copy</button>
+      <button data-id="${short_url}" class="copyUrl">Copy</button>
     </div>`;
     let div = document.createElement("div");
     div.className = "urlBlock__child";
     div.innerHTML = data;
     document.querySelector(".urlBlock").appendChild(div);
   });
+}
+
+document.addEventListener("click", function (e) {
+  if (e.target.className === "copyUrl") {
+    let btn = e.target;
+    let url = e.target.dataset.id;
+    navigator.clipboard.writeText(url);
+    btn.innerHTML = "Copied!";
+    btn.style.backgroundColor = "hsl(260, 8%, 14%)";
+    setTimeout(() => {
+      btn.innerHTML = "Copy";
+      btn.style.backgroundColor = "hsl(180, 66%, 49%)";
+    }, 1000);
+  }
+});
+
+function addInputErrStyle() {
+  input.style.border = "2px solid red";
+  errMsg.style.display = "block";
+}
+
+function removeInputErrStyle() {
+  input.style.border = "none";
+  errMsg.style.display = "none";
 }
